@@ -1,0 +1,166 @@
+@define-color bgcolor rgba(80,80,80,0.4);
+@define-color iconcolor rgba(255,255,255,0.6);
+
+window#waybar {
+background: rgba(0, 0, 0, 0);
+}
+
+tooltip {
+background: @bgcolor;
+border-radius: 10px;
+font-size: 20px;
+}
+
+#custom-launcher-firefox {
+background-image: url("/var/lib/flatpak/exports/share/icons/hicolor/32x32/apps/org.mozilla.firefox.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 25px;
+background-color: @bgcolor;
+padding: 1px 2px 1px 2px;
+min-width: 20px;
+min-height: 32px;
+}
+
+#custom-launcher-kate {
+background-image: url("/var/lib/flatpak/exports/share/icons/hicolor/32x32/apps/org.kde.kate.png");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 25px;
+background-color: @bgcolor;
+padding: 1px 2px 1px 2px;
+min-width: 22px;
+min-height: 32px;
+}
+
+#custom-launcher-terminal {
+background-image: -gtk-icontheme("org.xfce.terminal");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 22px;
+background-color: @bgcolor;
+padding: 1px 2px 1px 2px;
+min-width: 25px;
+min-height: 32px;
+}
+
+#custom-launcher-file-manager {
+background-image: -gtk-icontheme("system-file-manager");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 22px;
+background-color: @bgcolor;
+padding: 1px 2px 1px 2px;
+min-width: 25px;
+min-height: 32px;
+}
+
+#custom-launcher-nwg-grid {
+background-color: @bgcolor;
+color: @iconcolor;
+min-width: 25px;
+min-height: 25px;
+font-size: 30px;
+}
+
+#custom-launcher-nwg-drawer {
+background-color: @bgcolor;
+color: @iconcolor;
+min-width: 25px;
+min-height: 25px;
+font-size: 30px;
+}
+
+#custom-launcher-nwg-menu {
+background-color: @bgcolor;
+color: @iconcolor;
+min-width: 25px;
+min-height: 25px;
+font-size: 30px;
+}
+
+#custom-clipman {
+background-color: @bgcolor;
+font-size: 18px;
+color: @iconcolor;
+min-width: 25px;
+min-height: 25px;
+}
+
+#taskbar {
+border-radius: 0 0 0 0;
+background-color: @bgcolor;
+}
+
+#taskbar button {
+min-height: 25px;
+margin: 1px 2px 1px 2px;
+background: rgba(255,255,255,0);
+border-radius: 30%;
+}
+
+#taskbar button.active {
+background: rgba(255,255,255,0.4);
+}
+
+#taskbar button:hover {
+background: rgba(255,255,255,0.6);
+}
+
+#taskbar button.active:hover {
+    background: rgba(255,255,255,0.6);
+}
+
+#keyboard-state.numlock {
+background-color: @bgcolor;
+font-size: 20;
+color: @iconcolor;
+}
+
+#keyboard-state.capslock {
+background-color: @bgcolor;
+font-size: 20;
+color: @iconcolor;
+}
+
+#custom-spacer-top-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 0px 0px 0px;
+}
+
+#custom-spacer-top-right {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 0px 20px 0px;
+}
+
+#custom-spacer-center-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 20px 0px 0px;
+}
+
+#custom-spacer-center-right {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 0px 20px 0px;
+}
+
+#custom-spacer-bottom-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 20px 0px 0px;
+}
+
+#custom-spacer-bottom-right {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 20px 0px 0px;
+}

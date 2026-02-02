@@ -1,0 +1,118 @@
+@define-color iconcolor rgba(255,255,255,0.9);
+@define-color bgcolor rgba(80,80,80,0.4);
+
+window#waybar {
+background: rgba(0, 0, 0, 0);
+}
+
+#clock {
+color: #ffffff;
+font-size: 16px;
+background: @bgcolor;
+}
+
+#custom-spacer-clock-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 8px;
+border-radius: 0px 20px 0px 0px;
+}
+
+tooltip {
+background: @bgcolor;
+border-radius: 10px;
+font-size: 20px;
+}
+
+#battery.icon {
+color: @iconcolor;
+font-size: 22px;
+background: @bgcolor;
+}
+
+#battery.percent {
+color: @iconcolor;
+font-size: 20px;
+background: @bgcolor;
+}
+
+#power-profiles-daemon {
+color: @iconcolor;
+font-size: 20px;
+background: @bgcolor;
+}
+
+#pulseaudio {
+color: @iconcolor;
+font-size: 16px;
+padding: 2px 0 0 0;
+background: @bgcolor;
+}
+
+#pulseaudio-slider {
+background: @bgcolor;
+font-size: 12px;
+}
+
+#tray {
+background-color: @bgcolor;
+color: @iconcolor;
+min-height:15px;
+padding: 2px;
+}
+
+#network {
+background-color: @bgcolor;
+color: @iconcolor;
+min-height:20px;
+font-size: 16px;
+padding: 2px;
+}
+
+#bluetooth {
+background-color: @bgcolor;
+color: @iconcolor;
+min-height:20px;
+font-size: 18px;
+padding: 5px;
+}
+
+#custom-spacer-top-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+}
+
+#custom-spacer-top-right {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 0px 0px 20px;
+}
+
+#custom-spacer-tray-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 20px 0px 0px 0px;
+}
+
+#custom-spacer-tray-right {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 0px 0px 0px 20px;
+}
+
+#custom-spacer-bottom-left {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+border-radius: 20px 0px 0px 0px;
+}
+
+#custom-spacer-bottom-right {
+background: @bgcolor;
+font-size: 1;
+min-height: 10px;
+}

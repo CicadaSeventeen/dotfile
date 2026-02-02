@@ -1,0 +1,98 @@
+{
+	"width": 45,
+	"position": "left",
+	"modules-left": ["custom/spacer-top-left", "custom/launcher-nwg-grid", "custom/launcher-nwg-menu", "custom/spacer-top-right"],
+	"modules-center": ["custom/spacer-center-left", "group/dock", "custom/spacer-center-right"],
+	"modules-right": ["custom/spacer-bottom-left", "custom/clipman","keyboard-state#capslock", "keyboard-state#numlock", "custom/spacer-bottom-right"],
+	"group/dock": {
+		"orientation": "vertical",
+		"modules": [  "wlr/taskbar", "custom/launcher-file-manager", "custom/launcher-terminal","custom/launcher-firefox","custom/launcher-kate"]
+	},
+	"custom/launcher-firefox": {
+		"format": " ",
+		"on-click": "setsid flatpak run org.mozilla.firefox &>/dev/null &",
+		"tooltip-format": "firefox 浏览器"
+	},
+	"custom/launcher-terminal": {
+		"format": " ",
+		"on-click": "setsid xfce4-terminal &>/dev/null &",
+		"tooltip-format": "终端"
+	},
+	"custom/launcher-file-manager": {
+		"format": " ",
+		"on-click": "setsid pcmanfm-qt &>/dev/null &",
+		"tooltip-format": "文件管理器"
+	},
+	"custom/launcher-kate": {
+		"format": " ",
+		"on-click": "setsid kate &>/dev/null &",
+		"tooltip-format": "kate 文本编辑器"
+	},
+	"custom/launcher-nwg-menu": {
+		"format": "",
+		"on-click": "killall nwg-menu;setsid nwg-menu -term xfce4-terminal -fm pcmanfm-qt -va top &>/dev/null &",
+		"tooltip-format": "弹出菜单"
+	},
+	"custom/launcher-nwg-drawer": {
+		"format": "󰨑",
+		"on-click": "killall nwg-drawer;setsid nwg-drawer -term xfce4-terminal -fm pcmanfm-qt -fslen 2 &>/dev/null &",
+		"tooltip-format": "全屏菜单"
+	},
+	"custom/launcher-nwg-grid": {
+		"format": "󰨑",
+		"on-click": "killall nwggrid;setsid nwggrid &>/dev/null &",
+		"tooltip-format": "全屏菜单"
+	},
+	"custom/clipman": {
+		"format": "󱉥",
+		"on-click": "killall wofi;cliphist list | wofi --dmenu --location bottom_left --width 400 | cliphist decode| tee >(wl-copy) | wl-copy --primary",
+		"tooltip-format": "剪贴板"
+	},
+	"custom/spacer-top-left": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/spacer-top-right": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/spacer-center-left": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/spacer-center-right": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/spacer-bottom-left": {
+		"format": " ",
+		"tooltip": false
+	},
+	"custom/spacer-bottom-right": {
+		"format": " ",
+		"tooltip": false
+	},
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 21,
+		"spacing": 1,
+		"tooltip-format": "{title}",
+		"on-click": "minimize-raise",
+	},
+	"keyboard-state#numlock": {
+		"numlock": true,
+		"format": "{icon}",
+		"format-icons": {
+			"locked": "🅽",
+			"unlocked": ""
+		}
+	},
+	"keyboard-state#capslock": {
+		"capslock": true,
+		"format": "{icon}",
+		"format-icons": {
+			"locked": "🅲",
+			"unlocked": ""
+		}
+	}
+}

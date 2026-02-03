@@ -14,7 +14,7 @@
 	},
 	"group/battery-stack": {
 		"orientation": "vertical",
-		"modules": ["power-profiles-daemon", "battery#icon", "battery#percent"]
+		"modules": ["custom/idle","power-profiles-daemon", "battery#icon", "battery#percent"]
 	},
 	"custom/spacer-top-left": {
 		"format": " ",
@@ -127,6 +127,19 @@
 			"performance": "󰈸",
 			"balanced": "󱐋",
 			"power-saver": "󰌪"
+		}
+	},
+	"custom/idle": {
+		"format": "{icon}", // 这里只显示图标，也可以写成 "{icon} {text}"
+		"return-type": "json",
+		"exec": "swayidle_wrapper_flag_waybar",
+		"on-click": "swayidle_wrapper_switch &>/dev/null;kill -RTMIN+8 $PPID",
+		"interval": 60,
+		"signal": 8, // 对应 pkill 里的 RTMIN+8
+		"format-icons": {
+			"enabled": "󱑂",   // 对应脚本里的 "alt": "enabled"
+			"disabled": "󰰱",   // 对应脚本里的 "alt": "disabled
+			"unknown": ""
 		}
 	},
 	"pulseaudio": {
